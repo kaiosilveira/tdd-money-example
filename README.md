@@ -46,10 +46,12 @@ $5 + 10CHF = $10 if rate is 2:1
 
 ### Implementation
 
-| Chapter                  | Pull request                                                                                                                            |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| #1: Multi-currency money | [Add initial Dollar class with the capability of being multiplied by scalars](https://github.com/kaiosilveira/tdd-money-example/pull/1) |
-| #2: Degenerate objects   | [Fix dollar side effects](https://github.com/kaiosilveira/tdd-money-example/pull/2)                                                     |
-| #3: Equality for all     | [Add equality logic for Dollar](https://github.com/kaiosilveira/tdd-money-example/pull/3)                                               |
-| #4: Privacy              | [Make dollar.amount private](https://github.com/kaiosilveira/tdd-money-example/pull/4)                                                  |
-| #5: Franc-ly speaking    | [Introduce Franc (CHF) class](https://github.com/kaiosilveira/tdd-money-example/pull/5)                                                 |
+| Chapter                     | Pull request                                                                                                                            |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| #1: Multi-currency money    | [Add initial Dollar class with the capability of being multiplied by scalars](https://github.com/kaiosilveira/tdd-money-example/pull/1) |
+| #2: Degenerate objects      | [Fix dollar side effects](https://github.com/kaiosilveira/tdd-money-example/pull/2)                                                     |
+| #3: Equality for all        | [Add equality logic for Dollar](https://github.com/kaiosilveira/tdd-money-example/pull/3)                                               |
+| #4: Privacy                 | [Make dollar.amount private](https://github.com/kaiosilveira/tdd-money-example/pull/4)                                                  |
+| #5: Franc-ly speaking       | [Introduce Franc (CHF) class](https://github.com/kaiosilveira/tdd-money-example/pull/5)                                                 |
+| #6: Equality for All, Redux | [Remove duplication between Dollar and Franc](https://github.com/kaiosilveira/tdd-money-example/pull/6)                                 |
+| #7: Apples and Oranges      | [Fix Franc-Dollar comparison](https://github.com/kaiosilveira/tdd-money-example/pull/7)                                                 |
