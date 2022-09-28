@@ -26,7 +26,7 @@ abstract class Money {
 
   abstract times(multiplier: number): Money;
 
-  currency(): string {
+  get currency(): string {
     return this._currency;
   }
 }

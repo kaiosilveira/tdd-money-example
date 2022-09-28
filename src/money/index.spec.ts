@@ -1,4 +1,4 @@
-import Money, { Dollar } from '../money';
+import Money from '../money';
 
 describe('Money', () => {
   describe('equality', () => {
@@ -12,8 +12,8 @@ describe('Money', () => {
   });
 
   describe('currency', () => {
-    expect(Money.dollar(5).currency()).toEqual('USD');
-    expect(Money.franc(5).currency()).toEqual('CHF');
+    expect(Money.dollar(5).currency).toEqual('USD');
+    expect(Money.franc(5).currency).toEqual('CHF');
   });
 });
 
