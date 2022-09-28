@@ -49,3 +49,4 @@ $5 + 10CHF = $10 if rate is 2:1
 | #1: Multi-currency money | [Add initial Dollar class with the capability of being multiplied by scalars](https://github.com/kaiosilveira/tdd-money-example/pull/1) |
 | #2: Degenerate objects   | [Fix dollar side effects](https://github.com/kaiosilveira/tdd-money-example/pull/2)                                                     |
 | #3: Equality for all     | [Add equality logic for Dollar](https://github.com/kaiosilveira/tdd-money-example/pull/3)                                               |
+| #4: Privacy              | [Make dollar.amount private](https://github.com/kaiosilveira/tdd-money-example/pull/4)                                                  |
