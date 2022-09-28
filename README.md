@@ -46,4 +46,4 @@ $5 + 10CHF = $10 if rate is 2:1
 
 | Chapter | Pull request                                                                                                                    |
 | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| 1       | [Add Dollar class with the capability of being multiplied by scalars](https://github.com/kaiosilveira/tdd-money-example/pull/2) |
+| 1       | [Add Dollar class with the capability of being multiplied by scalars](https://github.com/kaiosilveira/tdd-money-example/pull/1) |
