@@ -9,7 +9,8 @@ export default class Dollar extends Money {
     return new Dollar(this.amount * multiplier);
   }
 
-  equals(dollar: Object): boolean {
-    return this.amount == (dollar as Dollar).amount;
+  equals(money: Object): boolean {
+    const other: Money = money as Money;
+    return this.amount == other.amount;
   }
 }
