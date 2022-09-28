@@ -1,4 +1,4 @@
-import Dollar from '../dollar';
+import { Dollar } from '../money';
 import Franc from '../franc';
 
 describe('Money', () => {

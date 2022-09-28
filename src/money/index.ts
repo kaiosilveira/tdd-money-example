@@ -1,4 +1,4 @@
-export default class Money {
+abstract class Money {
   private _amount: number;
 
   constructor(amount: number) {
@@ -13,4 +13,22 @@ export default class Money {
     const money: Money = obj as Money;
     return this.amount == money.amount && obj.constructor.name == this.constructor.name;
   }
+
+  static dollar(amount: number): Money {
+    return new Dollar(amount);
+  }
+
+  abstract times(multiplier: number): Money;
 }
+
+export class Dollar extends Money {
+  constructor(amount: number) {
+    super(amount);
+  }
+
+  times(multiplier: number): Dollar {
+    return new Dollar(this.amount * multiplier);
+  }
+}
+
+export default Money;
