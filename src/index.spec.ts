@@ -7,15 +7,15 @@ describe('Multi currency money', () => {
     it('should multiply $5 by 2 and get $10', () => {
       const five = new Dollar(5);
       const product = five.times(2);
-      expect(product.amount).toEqual(10);
+      expect(product.equals(new Dollar(10))).toBe(true);
     });
 
     it('should preserve the initial dollar amount when multiplying multiple times', () => {
       const five = new Dollar(5);
       let product: Dollar = five.times(2);
-      expect(product.amount).toEqual(10);
+      expect(product.equals(new Dollar(10))).toBe(true);
       product = five.times(3);
-      expect(product.amount).toEqual(15);
+      expect(product.equals(new Dollar(15))).toBe(true);
     });
   });
 
