@@ -1,1 +1,11 @@
-console.log('Hello world!');
+export default class Dollar {
+  amount: number;
+
+  constructor(amount: number) {
+    this.amount = amount;
+  }
+
+  times(multiplier: number) {
+    this.amount *= multiplier;
+  }
+}
