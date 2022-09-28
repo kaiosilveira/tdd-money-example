@@ -47,7 +47,7 @@ describe('Franc', () => {
 
     it('should preserve the initial dollar amount when multiplying multiple times', () => {
       const five = Money.franc(5);
-      let product: Franc = five.times(2);
+      let product: Money = five.times(2);
       expect(product.equals(Money.franc(10))).toBe(true);
       product = five.times(3);
       expect(product.equals(Money.franc(15))).toBe(true);

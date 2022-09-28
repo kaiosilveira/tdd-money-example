@@ -42,8 +42,11 @@ export class Dollar extends Money {
 }
 
 export class Franc extends Money {
+  private _currency: string;
+
   constructor(amount: number) {
     super(amount);
+    this._currency = 'CHF';
   }
 
   times(multiplier: number): Franc {
@@ -51,7 +54,7 @@ export class Franc extends Money {
   }
 
   currency(): string {
-    return 'CHF';
+    return this._currency;
   }
 }
 
