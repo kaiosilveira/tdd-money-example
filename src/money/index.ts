@@ -8,4 +8,9 @@ export default class Money {
   get amount() {
     return this._amount;
   }
+
+  equals(obj: Object): boolean {
+    const money: Money = obj as Money;
+    return this.amount == money.amount;
+  }
 }

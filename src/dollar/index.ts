@@ -8,9 +8,4 @@ export default class Dollar extends Money {
   times(multiplier: number): Dollar {
     return new Dollar(this.amount * multiplier);
   }
-
-  equals(money: Object): boolean {
-    const other: Money = money as Money;
-    return this.amount == other.amount;
-  }
 }
