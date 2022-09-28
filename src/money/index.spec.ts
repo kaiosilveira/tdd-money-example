@@ -10,6 +10,11 @@ describe('Money', () => {
       expect(Money.franc(5).equals(new Dollar(5))).toBe(false);
     });
   });
+
+  describe('currency', () => {
+    expect(Money.dollar(5).currency()).toEqual('USD');
+    expect(Money.franc(5).currency()).toEqual('CHF');
+  });
 });
 
 describe('Dollar', () => {
