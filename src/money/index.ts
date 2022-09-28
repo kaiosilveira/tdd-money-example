@@ -11,6 +11,6 @@ export default class Money {
 
   equals(obj: Object): boolean {
     const money: Money = obj as Money;
-    return this.amount == money.amount;
+    return this.amount == money.amount && obj.constructor.name == this.constructor.name;
   }
 }
