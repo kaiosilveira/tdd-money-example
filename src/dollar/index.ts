@@ -1,11 +1,8 @@
 import Money from '../money';
 
 export default class Dollar extends Money {
-  private amount: number;
-
   constructor(amount: number) {
-    super();
-    this.amount = amount;
+    super(amount);
   }
 
   times(multiplier: number): Dollar {
