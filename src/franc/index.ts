@@ -1,3 +1,5 @@
+import Money from "../money";
+
 export default class Franc {
   private amount: number;
 
@@ -9,7 +11,7 @@ export default class Franc {
     return new Franc(this.amount * multiplier);
   }
 
-  equals(dollar: Object): boolean {
-    return this.amount == (dollar as Franc).amount;
+  equals(object: Object): boolean {
+    return this.amount == (object as Money).amount;
   }
 }
