@@ -1,4 +1,4 @@
-import Money, { Dollar, Franc } from '../money';
+import Money, { Dollar } from '../money';
 
 describe('Money', () => {
   describe('equality', () => {
@@ -29,7 +29,7 @@ describe('Dollar', () => {
 
     it('should preserve the initial dollar amount when multiplying multiple times', () => {
       const five = Money.dollar(5);
-      let product: Dollar = five.times(2);
+      let product: Money = five.times(2);
       expect(product.equals(Money.dollar(10))).toBe(true);
       product = five.times(3);
       expect(product.equals(Money.dollar(15))).toBe(true);
