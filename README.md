@@ -1,3 +1,5 @@
+[![Continuous Integration](https://github.com/kaiosilveira/tdd-money-example/actions/workflows/ci.yml/badge.svg)](https://github.com/kaiosilveira/tdd-money-example/actions/workflows/ci.yml)
+
 # TDD by example - Part I - The Money Example
 
 This repository contains a working implementation of "The money example" (chapters 1 to 17) of the "Test-Driven Development by Example" book, by Kent Beck.
