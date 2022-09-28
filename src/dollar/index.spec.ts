@@ -18,10 +18,4 @@ describe('Multi currency money', () => {
       expect(product.equals(new Dollar(15))).toBe(true);
     });
   });
-
-  describe('equality', () => {
-    it('should consider an object representing $5 equals to another object representing $5', () => {
-      expect(new Dollar(5).equals(new Dollar(5))).toBe(true);
-    });
-  });
 });
