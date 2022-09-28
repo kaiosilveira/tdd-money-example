@@ -1,7 +1,11 @@
 export default class Money {
-  protected amount: number;
+  private _amount: number;
 
   constructor(amount: number) {
-    this.amount = amount;
+    this._amount = amount;
+  }
+
+  get amount() {
+    return this._amount;
   }
 }
