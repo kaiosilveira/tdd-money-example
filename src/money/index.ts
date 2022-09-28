@@ -52,8 +52,8 @@ export class Franc extends Money {
     this._currency = 'CHF';
   }
 
-  times(multiplier: number): Franc {
-    return new Franc(this.amount * multiplier, '');
+  times(multiplier: number): Money {
+    return Money.franc(this.amount * multiplier);
   }
 
   currency(): string {
