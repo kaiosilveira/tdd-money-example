@@ -9,5 +9,13 @@ describe('Multi currency money', () => {
       five.times(2);
       expect(five.amount).toEqual(10);
     });
+
+    it('should preserve the initial dollar amount when multiplying multiple times', () => {
+      const five = new Dollar(5);
+      five.times(2);
+      expect(five.amount).toEqual(10);
+      five.times(3);
+      expect(five.amount).toEqual(15);
+    });
   });
 });
