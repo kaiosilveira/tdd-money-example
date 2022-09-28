@@ -19,7 +19,7 @@ abstract class Money {
   }
 
   static franc(amount: number): Money {
-    return new Franc(amount, '');
+    return new Franc(amount, 'CHF');
   }
 
   abstract times(multiplier: number): Money;
