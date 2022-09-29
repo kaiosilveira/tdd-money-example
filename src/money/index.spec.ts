@@ -3,6 +3,13 @@ import Money from '../money';
 describe('Money', () => {
   it.todo('should sum $5 + 10CHF as being $10 if exchange rate is 2:1');
 
+  describe('addition', () => {
+    it('should sum $5 + $5 and get $10', () => {
+      Money sum = Money.dollar(5).plus(Money.dollar(5));
+      expect(sum).toEqual(Money.dollar(10));
+    });
+  });
+
   describe('multiplication', () => {
     it('should multiply $5 by 2 and get $10', () => {
       const five: Money = Money.dollar(5);
