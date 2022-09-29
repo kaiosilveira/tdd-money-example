@@ -31,7 +31,7 @@ export default class Money implements Expression {
     return new Money(this.amount * multiplier, this.currency);
   }
 
-  plus(addend: Money): Expression {
+  plus(addend: Expression): Expression {
     return new Sum(this, addend);
   }
 
