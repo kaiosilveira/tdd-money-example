@@ -1,6 +1,8 @@
 import Money from '../money';
 
-export default interface Expression {}
+export default interface Expression {
+  reduce(to: string): Money;
+}
 
 export class Sum implements Expression {
   private _augend: Money;
