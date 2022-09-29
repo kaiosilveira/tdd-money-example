@@ -5,8 +5,13 @@ describe('Money', () => {
 
   describe('addition', () => {
     it('should sum $5 + $5 and get $10', () => {
-      Money sum = Money.dollar(5).plus(Money.dollar(5));
-      expect(sum).toEqual(Money.dollar(10));
+      const five: Money = Money.dollar(5);
+      const sum: Expression = five.plus(five);
+      const bank = new Bank();
+
+      const reduced: Money = bank.reduce(sum, 'USD');
+
+      expect(reduced).toEqual(Money.dollar(10));
     });
   });
 
