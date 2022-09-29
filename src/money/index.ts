@@ -13,7 +13,7 @@ class Money {
 
   equals(obj: Object): boolean {
     const money: Money = obj as Money;
-    return this.amount == money.amount && obj.constructor.name == this.constructor.name;
+    return this.amount == money.amount && money.currency == this.currency;
   }
 
   static dollar(amount: number): Money {
