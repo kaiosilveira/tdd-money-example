@@ -4,8 +4,8 @@ import Bank from '../bank';
 
 describe('Money', () => {
   it('should sum $5 + 10CHF as being $10 if exchange rate is 2:1', () => {
-    const fiveBucks: Money = Money.dollar(5);
-    const tenFrancs: Money = Money.franc(10);
+    const fiveBucks: Expression = Money.dollar(5);
+    const tenFrancs: Expression = Money.franc(10);
     const bank: Bank = new Bank();
     bank.addRate('CHF', 'USD', 2);
 
