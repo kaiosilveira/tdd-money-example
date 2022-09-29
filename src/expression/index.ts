@@ -3,27 +3,33 @@ import Money from '../money';
 
 export default interface Expression {
   reduce(bank: Bank, to: string): Money;
+  plus(addend: Expression): Expression;
 }
 
 export class Sum implements Expression {
-  private _augend: Money;
-  private _addend: Money;
+  private _augend: Expression;
+  private _addend: Expression;
 
-  constructor(augend: Money, addend: Money) {
+  constructor(augend: Expression, addend: Expression) {
     this._augend = augend;
     this._addend = addend;
   }
 
-  get augend(): Money {
+  get augend(): Expression {
     return this._augend;
   }
 
-  get addend(): Money {
+  get addend(): Expression {
     return this._addend;
   }
 
   reduce(bank: Bank, to: string): Money {
-    const amount: number = this.augend.amount + this.addend.amount;
+    const amount: number =
+      this.augend.reduce(bank, to).amount + this.addend.reduce(bank, to).amount;
     return new Money(amount, to);
+  }
+
+  plus(addend: Expression): Expression {
+    throw new Error('Method not implemented.');
   }
 }
