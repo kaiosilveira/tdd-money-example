@@ -1,4 +1,4 @@
-import Expression from '../expression';
+import Expression, { Sum } from '../expression';
 
 export default class Money {
   private _amount: number;
@@ -30,8 +30,8 @@ export default class Money {
     return new Money(this.amount * multiplier, this.currency);
   }
 
-  plus(money: Money): Expression {
-    return {};
+  plus(addend: Money): Expression {
+    return new Sum(this, addend);
   }
 
   get currency(): string {
