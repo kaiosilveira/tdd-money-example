@@ -18,4 +18,9 @@ export class Sum implements Expression {
   get addend(): Money {
     return this._addend;
   }
+
+  reduce(to: string): Money {
+    const amount: number = this.augend.amount + this.addend.amount;
+    return new Money(amount, to);
+  }
 }
