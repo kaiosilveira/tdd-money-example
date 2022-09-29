@@ -3,6 +3,13 @@ import Expression, { Sum } from '../expression';
 import Money from '../money';
 
 describe('Bank', () => {
+  describe('rates', () => {
+    it('should return 1 if currencies are the same', () => {
+      const bank: Bank = new Bank();
+      expect(bank.rate('USD', 'USD')).toEqual(1);
+    });
+  });
+
   describe('reduce', () => {
     describe('sum', () => {
       it('should reduce a sum expression', () => {
@@ -22,6 +29,7 @@ describe('Bank', () => {
 
       it('should reduce mixed Money currencies', () => {
         const bank: Bank = new Bank();
+        bank.addRate('CHF', 'USD', 2);
         const result: Money = bank.reduce(Money.franc(2), 'USD');
         expect(result).toEqual(Money.dollar(1));
       });
