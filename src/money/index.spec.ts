@@ -20,6 +20,12 @@ describe('Money', () => {
   });
 
   describe('equality', () => {
+    it('should return false if object is not parsable to Money', () => {
+      class MyTestingClz {}
+      const myTestingObj = new MyTestingClz();
+      expect(Money.dollar(5).equals(myTestingObj)).toBe(false);
+    });
+
     it('should consider an object representing $5 equals to another object representing $5', () => {
       expect(Money.dollar(5).equals(Money.dollar(5))).toBe(true);
       expect(Money.dollar(5).equals(Money.dollar(6))).toBe(false);
