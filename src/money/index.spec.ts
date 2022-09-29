@@ -1,4 +1,4 @@
-import Money from '../money';
+import Money, { Franc } from '../money';
 
 describe('Money', () => {
   describe('equality', () => {
@@ -8,6 +8,10 @@ describe('Money', () => {
       expect(Money.dollar(5).equals(Money.dollar(5))).toBe(true);
       expect(Money.dollar(5).equals(Money.dollar(6))).toBe(false);
       expect(Money.franc(5).equals(Money.dollar(5))).toBe(false);
+    });
+
+    it('should return true if comparing two different classes with the same amount and currency', () => {
+      expect(new Money(5, 'CHF').equals(new Franc(5, 'CHF'))).toBe(true);
     });
   });
 
