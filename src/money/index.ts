@@ -33,13 +33,13 @@ abstract class Money {
 
 export class Dollar extends Money {
   times(multiplier: number): Money {
-    return Money.dollar(this.amount * multiplier);
+    return new Dollar(this.amount * multiplier, 'USD');
   }
 }
 
 export class Franc extends Money {
   times(multiplier: number): Money {
-    return Money.franc(this.amount * multiplier);
+    return new Franc(this.amount * multiplier, 'CHF');
   }
 }
 
