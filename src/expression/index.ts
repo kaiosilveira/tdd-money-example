@@ -6,19 +6,19 @@ export default interface Expression {
 }
 
 export class Sum implements Expression {
-  private _augend: Money;
-  private _addend: Money;
+  private _augend: Expression;
+  private _addend: Expression;
 
-  constructor(augend: Money, addend: Money) {
+  constructor(augend: Expression, addend: Expression) {
     this._augend = augend;
     this._addend = addend;
   }
 
-  get augend(): Money {
+  get augend(): Expression {
     return this._augend;
   }
 
-  get addend(): Money {
+  get addend(): Expression {
     return this._addend;
   }
 
