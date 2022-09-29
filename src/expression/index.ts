@@ -1,6 +1,9 @@
+import Bank from '../bank';
 import Money from '../money';
 
-export default interface Expression {}
+export default interface Expression {
+  reduce(bank: Bank, to: string): Money;
+}
 
 export class Sum implements Expression {
   private _augend: Money;
@@ -19,7 +22,7 @@ export class Sum implements Expression {
     return this._addend;
   }
 
-  reduce(to: string): Money {
+  reduce(bank: Bank, to: string): Money {
     const amount: number = this.augend.amount + this.addend.amount;
     return new Money(amount, to);
   }
