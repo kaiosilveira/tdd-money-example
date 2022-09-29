@@ -6,6 +6,16 @@ describe('Money', () => {
   it.todo('should sum $5 + 10CHF as being $10 if exchange rate is 2:1');
 
   describe('addition', () => {
+    it('should return a Sum expression', () => {
+      const five: Money = Money.dollar(5);
+
+      const sumExp: Expression = five.plus(five);
+      const sum = sumExp as Sum;
+
+      expect(sum.augend).toEqual(five);
+      expect(sum.addend).toEqual(five);
+    });
+
     it('should sum $5 + $5 and get $10', () => {
       const five: Money = Money.dollar(5);
       const sum: Expression = five.plus(five);
