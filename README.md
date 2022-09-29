@@ -55,4 +55,5 @@ $5 + 10CHF = $10 if rate is 2:1
 | #5: Franc-ly speaking       | [Introduce Franc (CHF) class](https://github.com/kaiosilveira/tdd-money-example/pull/5)                                                 |
 | #6: Equality for All, Redux | [Remove duplication between Dollar and Franc](https://github.com/kaiosilveira/tdd-money-example/pull/6)                                 |
 | #7: Apples and Oranges      | [Fix Franc-Dollar comparison](https://github.com/kaiosilveira/tdd-money-example/pull/7)                                                 |
-| #7: Makin' Objects          | [Introduce factory methods Money.franc and Money.dollar](https://github.com/kaiosilveira/tdd-money-example/pull/8)                      |
+| #8: Makin' Objects          | [Introduce factory methods Money.franc and Money.dollar](https://github.com/kaiosilveira/tdd-money-example/pull/8)                      |
+| #9: Times We're Living in   | [Introduce the concept of currency](https://github.com/kaiosilveira/tdd-money-example/pull/9)                                           |
