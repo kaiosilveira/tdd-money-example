@@ -1,4 +1,4 @@
-import Expression from '../expression';
+import Expression, { Sum } from '../expression';
 import Money from '../money';
 import Bank from '../bank';
 
