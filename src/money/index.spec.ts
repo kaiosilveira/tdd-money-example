@@ -3,8 +3,6 @@ import Money, { Franc } from '../money';
 describe('Money', () => {
   describe('equality', () => {
     it('should consider an object representing $5 equals to another object representing $5', () => {
-      expect(Money.franc(5).equals(Money.franc(5))).toBe(true);
-      expect(Money.franc(5).equals(Money.franc(6))).toBe(false);
       expect(Money.dollar(5).equals(Money.dollar(5))).toBe(true);
       expect(Money.dollar(5).equals(Money.dollar(6))).toBe(false);
       expect(Money.franc(5).equals(Money.dollar(5))).toBe(false);
