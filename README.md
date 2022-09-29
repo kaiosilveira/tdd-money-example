@@ -57,3 +57,4 @@ $5 + 10CHF = $10 if rate is 2:1
 | #7: Apples and Oranges      | [Fix Franc-Dollar comparison](https://github.com/kaiosilveira/tdd-money-example/pull/7)                                                 |
 | #8: Makin' Objects          | [Introduce factory methods Money.franc and Money.dollar](https://github.com/kaiosilveira/tdd-money-example/pull/8)                      |
 | #9: Times We're Living in   | [Introduce the concept of currency](https://github.com/kaiosilveira/tdd-money-example/pull/9)                                           |
+| #10: Interesting Times      | [Pull up times method to Money](https://github.com/kaiosilveira/tdd-money-example/pull/10)                                              |
