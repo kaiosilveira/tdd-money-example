@@ -1,3 +1,5 @@
+import Expression from '../expression';
+
 export default class Money {
   private _amount: number;
   private _currency: string;
@@ -26,6 +28,10 @@ export default class Money {
 
   times(multiplier: number): Money {
     return new Money(this.amount * multiplier, this.currency);
+  }
+
+  plus(money: Money): Expression {
+    return {};
   }
 
   get currency(): string {

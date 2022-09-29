@@ -1,7 +1,21 @@
+import Expression from '../expression';
 import Money from '../money';
+import Bank from '../bank';
 
 describe('Money', () => {
   it.todo('should sum $5 + 10CHF as being $10 if exchange rate is 2:1');
+
+  describe('addition', () => {
+    it('should sum $5 + $5 and get $10', () => {
+      const five: Money = Money.dollar(5);
+      const sum: Expression = five.plus(five);
+      const bank = new Bank();
+
+      const reduced: Money = bank.reduce(sum, 'USD');
+
+      expect(reduced).toEqual(Money.dollar(10));
+    });
+  });
 
   describe('multiplication', () => {
     it('should multiply $5 by 2 and get $10', () => {
