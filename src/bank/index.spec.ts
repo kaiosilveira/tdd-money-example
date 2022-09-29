@@ -13,6 +13,12 @@ describe('Bank', () => {
 
         expect(result).toEqual(Money.dollar(7));
       });
+
+      it('should reduce Money', () => {
+        const bank: Bank = new Bank();
+        const result: Money = bank.reduce(Money.dollar(1), 'USD');
+        expect(result).toEqual(Money.dollar(1));
+      });
     });
   });
 });
