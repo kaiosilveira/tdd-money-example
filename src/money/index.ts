@@ -21,7 +21,7 @@ class Money {
   }
 
   static franc(amount: number): Money {
-    return new Franc(amount, 'CHF');
+    return new Money(amount, 'CHF');
   }
 
   times(multiplier: number): Money {
