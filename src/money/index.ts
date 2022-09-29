@@ -1,4 +1,4 @@
-abstract class Money {
+class Money {
   private _amount: number;
   private _currency: string;
 
@@ -24,7 +24,9 @@ abstract class Money {
     return new Franc(amount, 'CHF');
   }
 
-  abstract times(multiplier: number): Money;
+  times(multiplier: number): Money {
+    return new Money(0, 'USD');
+  }
 
   get currency(): string {
     return this._currency;
