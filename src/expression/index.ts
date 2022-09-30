@@ -30,6 +30,6 @@ export class Sum implements Expression {
   }
 
   plus(addend: Expression): Expression {
-    throw new Error('Method not implemented.');
+    return new Sum(this, addend);
   }
 }
