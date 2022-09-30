@@ -59,3 +59,8 @@ $5 + 10CHF = $10 if rate is 2:1
 | #9: Times We're Living in   | [Introduce the concept of currency](https://github.com/kaiosilveira/tdd-money-example/pull/9)                                           |
 | #10: Interesting Times      | [Pull up times method to Money](https://github.com/kaiosilveira/tdd-money-example/pull/10)                                              |
 | #11: The Root of All Evil   | [Delete Franc and Dollar subclasses](https://github.com/kaiosilveira/tdd-money-example/pull/11)                                         |
+| #12: Addition, Finally      | [Implement money addition](https://github.com/kaiosilveira/tdd-money-example/pull/12)                                                   |
+| #13: Make It                | [Implement real reduce operation for bank ](https://github.com/kaiosilveira/tdd-money-example/pull/13)                                  |
+| #14: Change                 | [Reduce mixed currency money](https://github.com/kaiosilveira/tdd-money-example/pull/14)                                                |
+| #15: Mixed currencies       | [Add support to sum mixed currencies](https://github.com/kaiosilveira/tdd-money-example/pull/15)                                        |
+| #16: Abstraction, Finally   | [Add .plus and .times to Expression interface](https://github.com/kaiosilveira/tdd-money-example/pull/16)                               |
