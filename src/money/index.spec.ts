@@ -15,14 +15,15 @@ describe('Money', () => {
   });
 
   describe('addition', () => {
-    it('should return a Sum expression', () => {
-      const five: Money = Money.dollar(5);
+    it('should return a Sum expression if currencies are not equal', () => {
+      const fiveBucks: Money = Money.dollar(5);
+      const fiveFrancs: Money = Money.franc(5);
 
-      const sumExp: Expression = five.plus(five);
+      const sumExp: Expression = fiveBucks.plus(fiveFrancs);
       const sum = sumExp as Sum;
 
-      expect(sum.augend).toEqual(five);
-      expect(sum.addend).toEqual(five);
+      expect(sum.augend).toEqual(fiveBucks);
+      expect(sum.addend).toEqual(fiveFrancs);
     });
 
     it('should sum $5 + $5 and get $10', () => {
@@ -33,6 +34,11 @@ describe('Money', () => {
       const reduced: Money = bank.reduce(sum, 'USD');
 
       expect(reduced).toEqual(Money.dollar(10));
+    });
+
+    it('should return a Money object if the two currencies are the same', () => {
+      const result = Money.dollar(1).plus(Money.dollar(1));
+      expect(result).toBeInstanceOf(Money);
     });
   });
 
