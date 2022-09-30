@@ -32,6 +32,8 @@ export default class Money implements Expression {
   }
 
   plus(addend: Expression): Expression {
+    if (addend instanceof Money && (addend as Money).currency == this.currency)
+      return new Money(this.amount + addend.amount, this.currency);
     return new Sum(this, addend);
   }
 
