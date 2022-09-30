@@ -14,9 +14,8 @@ export default class Money implements Expression {
     return this._amount;
   }
 
-  equals(obj: Object): boolean {
-    const money: Money = obj as Money;
-    return this.amount == money.amount && money.currency == this.currency;
+  get currency(): string {
+    return this._currency;
   }
 
   static dollar(amount: number): Money {
@@ -25,6 +24,11 @@ export default class Money implements Expression {
 
   static franc(amount: number): Money {
     return new Money(amount, 'CHF');
+  }
+
+  equals(obj: Object): boolean {
+    const money: Money = obj as Money;
+    return this.amount == money.amount && money.currency == this.currency;
   }
 
   times(multiplier: number): Money {
@@ -40,9 +44,5 @@ export default class Money implements Expression {
   reduce(bank: Bank, to: string): Money {
     const rate: number = bank.rate(this.currency, to);
     return new Money(this.amount / rate, to);
-  }
-
-  get currency(): string {
-    return this._currency;
   }
 }
