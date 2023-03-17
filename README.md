@@ -2,7 +2,7 @@
 
 ℹ️ _This repository is part of my TDD series, please refer to [kaiosilveira/test-driven-development](https://github.com/kaiosilveira/test-driven-development) for the full picture_
 
-# TDD by example - Part I - The Money Example
+# TDD by example - Part I: The Money Example
 
 This repository contains a working implementation of "The money example" (chapters 1 to 16) of the "Test-Driven Development by Example" book, by Kent Beck.
 
